@@ -1,82 +1,28 @@
-# Student Grade Tracker
+# Overview
 
-## Overview
+As a software engineer focused on strengthening my foundation in object-oriented programming, I wanted to build a project that forced me to think in terms of classes, inheritance, and clean code structure rather than just writing procedural scripts.
 
-A console-based Java application that allows teachers or students to:
-- Add students by name and ID
-- Record assignments and weighted exams
-- View individual grade reports with letter grades
-- View a class-wide summary and average
-- Save/load data to a CSV file
+This is a console-based Student Grade Tracker written in Java. It allows a user to add students, record assignments and weighted exams, view individual grade reports with letter grades, see a full class summary, and save all data to a CSV file. The app launches with demo students pre-loaded so the features are immediately visible.
 
----
+My purpose in writing this software was to get hands-on experience with core Java concepts — specifically interfaces, abstract classes, inheritance, the Collections Framework, and file I/O — by applying them to a real, working program rather than isolated exercises.
 
-## How to Run
+[Software Demo Video](http://youtube.link.goes.here)
 
-### Prerequisites
-- Java JDK 17 or higher installed
-- VS Code with the "Extension Pack for Java" installed
+# Development Environment
 
-### Steps
-1. Clone or download this repository
-2. Open the project folder in VS Code
-3. Open `src/GradeTracker.java`
-4. Click the **▶ Run** button above the `main` method (or press `Ctrl+F5`)
+I developed this project using Visual Studio Code with the Extension Pack for Java by Microsoft, which provides language support, debugging, and an integrated run button. The project is compiled and run using the Java JDK 17.
 
-The app will launch in the terminal with 3 demo students pre-loaded so you can explore immediately.
+The project is written entirely in Java with no external libraries. It uses only the Java standard library, including `java.util.ArrayList` and `java.util.Scanner` for data handling and user input, and `java.io.PrintWriter`, `java.io.FileWriter`, and `java.io.BufferedReader` for file reading and writing.
 
----
+# Useful Websites
 
-## Project Structure
+- [Oracle Java Documentation](https://docs.oracle.com/en/java/)
+- [W3Schools Java Tutorial](https://www.w3schools.com/java/)
+- [GeeksforGeeks - Java ArrayList](https://www.geeksforgeeks.org/arraylist-in-java/)
+- [Baeldung - Abstract Classes in Java](https://www.baeldung.com/java-abstract-class)
 
-```
-GradeTracker/
-├── src/
-│   ├── GradeTracker.java     ← Main application / entry point
-│   ├── Student.java           ← Student class with ArrayList of assessments
-│   ├── Assessment.java        ← Abstract base class (extends + abstract)
-│   ├── Assignment.java        ← Concrete subclass of Assessment
-│   ├── Exam.java              ← Concrete subclass with weight field
-│   └── GradedItem.java        ← Interface (implements keyword)
-└── README.md
-```
+# Future Work
 
----
-
-## Requirements Checklist
-
-| Requirement | How It's Met |
-|---|---|
-| **Variables** | `name`, `score`, `maxScore`, `weight`, `classTotal`, etc. throughout all classes |
-| **Expressions** | Percentage calc `(score / maxScore) * 100`, weighted average, class average |
-| **Conditionals** | Letter grade logic, input validation, menu routing (`if/else if` chains) |
-| **Loops** | `for` and `while` loops for menu, student list, assessments, and class summary |
-| **Functions** | All methods have function-level Javadoc comments |
-| **Classes** | `Student`, `Assessment`, `Assignment`, `Exam`, `FileManager`, `GradeTracker` |
-| **Collections Framework** | `ArrayList<Student>` in `GradeTracker`, `ArrayList<Assessment>` in `Student` |
-| **File I/O** | `FileManager.saveToFile()` writes CSV; `FileManager.loadAndDisplay()` reads it |
-| **Inheritance** | `Assignment` and `Exam` both extend the `abstract` class `Assessment` |
-| **Interface** | `GradedItem` interface implemented by `Assessment` (and all subclasses) |
-
----
-
-## Demo
-
-When launched, the app auto-loads 3 students:
-- **Alice Johnson** — solid B student with weighted exams
-- **Bob Smith** — struggling, grades in the D–F range
-- **Carol White** — near-perfect scores across the board
-
-From the menu, choose option **4** to view the full class summary right away.
-
----
-
-## Author
-
-[Your Name]  
-[Your Course / Institution]  
-[Date]
-
-## Video Demo
-
-[Link to your video demo here]
+- Add the ability to fully reload students and their assessments from the CSV file on startup
+- Build a simple GUI using Java Swing to replace the console menu
+- Allow students to be deleted or have their assessments edited after entry
